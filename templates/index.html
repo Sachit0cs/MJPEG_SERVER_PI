@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulated Pi Camera Live Stream with Motion Blur</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <h1>Simulated Pi Camera Live Stream</h1>
+      <p>Webcam MJPEG stream with adjustable motion blur.</p>
+    </header>
+
+    <section class="panel">
+      <div class="video-wrap">
+        <img id="stream" src="/video_feed" alt="Live stream" />
+        <div class="badge" id="fps">FPS: --</div>
+      </div>
+
+      <div class="controls">
+        <div class="control">
+          <label for="blur">Blur strength</label>
+          <input id="blur" type="range" min="1" max="31" step="1" value="7" />
+          <span id="blurValue">7</span>
+        </div>
+
+        <div class="control buttons">
+          <button id="start">Start</button>
+          <button id="stop">Stop</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
